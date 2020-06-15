@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let nhietdocothe = +prompt('Nhập số nhiệt độ cơ thể');
+    for (;;){
+        if (nhietdocothe>100){
+            alert('Giảm nhiệt độ');
+            nhietdocothe = +prompt('Nhập số nhiệt độ cơ thể');
+        }else if (nhietdocothe<20){
+            alert('Tăng nhiệt độ');
+            nhietdocothe = +prompt('Nhập số nhiệt độ cơ thể');
+        }else {
+            alert('Nhiệt độ cơ thể là : '+nhietdocothe);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

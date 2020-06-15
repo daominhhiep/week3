@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<div align="100%">
+<input type="button" id="play" value="Chơi" onclick="playGame()" style="background-color: black; color: white; width: 100px; height: 100px; font-size: 25px" align="center">
+</div>
+<script>
+    function playGame () {
+        let a = parseInt(prompt('Nhập vào số a'));
+        let b = parseInt(prompt('Nhập vào số b'));
+        let c = Math.floor(Math.random() * (b-a+1))+a;
+        let d = parseInt(prompt('Nhập vào số muốn đoán'));
+        let i=1
+        for(i;i<=3;i++){
+            if (d==c){
+                alert('Win');
+                break;
+            } else if (d>c){
+                alert('Nhỏ hơn');
+                d = parseInt(prompt('Nhập vào số muốn đoán'));
+            } else {
+                alert('Lớn hơn');
+                d = parseInt(prompt('Nhập vào số muốn đoán'));
+            }
+        }
+    }
+</script>
+</body>
+</html>
