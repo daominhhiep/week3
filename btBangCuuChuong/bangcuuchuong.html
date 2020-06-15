@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+<div>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+<script language="javascript">
+    let sout, i, j;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = 1;
+    j = 2;
+    while ( i<= 9) {
+        sout = sout + "<tr>";
+        while (j <= 9) {
+            sout = sout + "<td>" + j + 'x' + i + '=' + i*j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 2;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
