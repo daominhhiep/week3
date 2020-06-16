@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h1> Từ điển Anh - Việt</h1>
+<h4> (Lưu ý: Không viết hoa chữ cái)</h4>
+<div>
+    <table>
+        <tr>
+            <td><p>English</p></td>
+            <td></td>
+            <td><p> Vietnamese</p></td>
+        </tr>
+        <tr>
+            <td><textarea cols="30" rows="5" id="eng" ></textarea> </td>
+            <td><button onclick="display()" > Dịch </button></td>
+            <td> <textarea cols="30" rows="5" id="result" disabled></textarea></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function display () {
+        let english = ['goodbye', 'hello', 'game','school'];
+        let vietnamese = ['tạm biệt', 'xin chào', 'trò chơi','trường học'];
+        let translate = document.getElementById('eng').value;
+
+        for (let i = 0; i < english.length; i++) {
+            if (translate == english[i]) {
+                document.getElementById('result').value = vietnamese[i];
+                break;
+            } else {
+                document.getElementById('result').value = 'Từ của bạn chưa có trong từ điển!';
+            }
+        }
+    }
+</script>
+</body>
+</html>
