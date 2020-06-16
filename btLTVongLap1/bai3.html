@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    function display() {
+        let sothu1 = sothu2 = 1;
+        document.write(sothu1+'<br>'+ sothu2+'<br>');
+        let count  = 2;
+        for (;count<=20;count++){
+            let sothu3 = sothu1 + sothu2;
+            sothu1=sothu2;
+            sothu2=sothu3;
+            document.write(  sothu3 + '<br>');
+        }
+    } display(20);
+</script>
+</body>
+</html>

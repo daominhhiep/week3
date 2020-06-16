@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào đây:');
+    let UPPER = 'AÂĂBCDĐEÊFGHIJKLMNOÔƠPQRSTUƯVWXYZ';
+    let LOWER = 'aâăbcdđeêfghijklmnoôơpqrstuưvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+    document.write(result.join(''));
+</script>
+
+</body>
+</html>
