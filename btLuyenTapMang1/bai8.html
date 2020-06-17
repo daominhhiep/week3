@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    function inputArray(a){
+        let sizeArr;
+        do{
+            sizeArr= 10;
+        }while(sizeArr<=0);
+
+        for(let i=0;i<sizeArr;i++){
+            a[i]= Math.floor(Math.random()*50);
+        }
+    }
+
+    function displayArray(a){
+        for(i=0;i<a.length;i++){
+            document.write(a[i] +" ");
+
+        }
+    }
+
+    let arr=new Array();
+    inputArray(arr);
+    displayArray(arr);
+    document.write("<br> Sắp xếp mảng theo thứ tự giảm dần: " + arr.sort(function(a, b) {return b - a}))
+</script>
+</body>
+</html>

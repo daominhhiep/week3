@@ -15,17 +15,17 @@
             <td><p> Vietnamese</p></td>
         </tr>
         <tr>
-            <td><textarea cols="30" rows="5" id="eng" ></textarea> </td>
-            <td><button onclick="display()" > Dịch </button></td>
-            <td> <textarea cols="30" rows="5" id="result" disabled></textarea></td>
+            <td><textarea id="input" cols="30" rows="5" ></textarea> </td>
+            <td><button onclick="display()" style="width: 75px; height: 50px"> Dịch </button></td>
+            <td> <textarea id="result" placeholder="Kết quả" cols="30" rows="5"  disabled></textarea></td>
         </tr>
     </table>
 </div>
 <script>
-    function display () {
+    function display() {
         let english = ['goodbye', 'hello', 'game','school'];
         let vietnamese = ['tạm biệt', 'xin chào', 'trò chơi','trường học'];
-        let translate = document.getElementById('eng').value;
+        let translate = document.getElementById('input').value;
 
         for (let i = 0; i < english.length; i++) {
             if (translate == english[i]) {
@@ -33,6 +33,7 @@
                 break;
             } else {
                 document.getElementById('result').value = 'Từ của bạn chưa có trong từ điển!';
+                console.log(result);
             }
         }
     }

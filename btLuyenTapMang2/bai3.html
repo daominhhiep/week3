@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    function inputArray(a){
+        let sizeArr;
+        do{
+            sizeArr= +prompt('Nhập vào kích thước mảng: ');
+        }while(sizeArr<=0);
+
+        for(let i=0;i<sizeArr;i++){
+            a[i]= prompt("Nhập phần tử thứ" + i+ " : ");
+        }
+    }
+
+    function displayArray(a){
+        for(i=0;i<a.length;i++){
+            document.write(a[i] +" ");
+            }
+        }
+
+    function onlyNumber(a){
+        let x=0;
+        for(i=0;i<a.length;i++){
+            if (!isNaN(a[i]) ) {
+                x++;
+            }
+        }
+        return x;
+    }
+
+    let arr=new Array();
+    inputArray(arr);
+    displayArray(arr);
+    document.write("<br> Có " + onlyNumber(arr) + " ký tự số trong mảng");
+
+</script>
+</body>
+</html>

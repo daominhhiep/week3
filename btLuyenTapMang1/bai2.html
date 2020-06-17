@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let maxPosition;
+    let arr=new Array();
+
+    function inputArray(a){
+        let sizeArr;
+        do{
+            sizeArr= 10;
+        }while(sizeArr<=0);
+
+        for(let i=0;i<sizeArr;i++){
+            a[i]= Math.floor(Math.random()*30);
+        }
+    }
+
+    function displayArray(a){
+        for(i=0;i<a.length;i++){
+            document.write(a[i] +" ");
+        }
+    }
+
+    function maxValue(a){
+        let max=a[0];
+        for(let i=1;i<a.length;i++){
+            if(max<a[i]){
+                max=a[i];
+                maxPosition = i;
+            }
+        }
+        return max;
+    }
+
+    inputArray(arr);
+    displayArray(arr);
+    document.write("<br> Phần tử lớn nhất trong mảng là: " + maxValue(arr));
+    document.write("<br> Vị trí phần tử lớn nhất trong mảng là: " + maxPosition);
+
+</script>
+</body>
+</html>
