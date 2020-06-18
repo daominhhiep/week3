@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Star Book</h1>
+<input id="input" type="text" oninput="display(this.value)" onchange="display(this.value)" placeholder="Star">
+<input id="result" placeholder="Constellation" disabled>
+
+<div>
+</div>
+<script>
+    function display() {
+    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let galaxy = document.getElementById('input').value;
+
+        for (let i = 0; i < star.length; i++) {
+            if (galaxy == star[i]) {
+                document.getElementById('result').value = constellation[i];
+                break;
+            } else {
+                document.getElementById('result').value = 'Không có chòm sao của ngôi sao này!';
+            }
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>
