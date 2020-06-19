@@ -35,14 +35,14 @@ function checkWin(xPos,yPos){
     alert(valueOfCell);
     while(listGame[i][j+1]==valueOfCell){
         count++;
-        confirmWinner(count,5);
+        confirmWinner(count,3);
         j++;
     }
     i=xPos;
     j=yPos;
     while(listGame[i][j-1]==valueOfCell){
         count++;
-        confirmWinner(count,5);
+        confirmWinner(count,3);
         j--;
     }
 }
