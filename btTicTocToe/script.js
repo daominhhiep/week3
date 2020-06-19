@@ -44,6 +44,15 @@ function checkWin(xPos,yPos){
         count++;
         confirmWinner(count,3);
         j--;
+    }while(listGame[i+1][j]==valueOfCell){
+        count++;
+        confirmWinner(count,3);
+        i++;
+    }
+    while(listGame[i-1][j]==valueOfCell){
+        count++;
+        confirmWinner(count,3);
+        i--;
     }
 }
 function confirmWinner(count,number){
