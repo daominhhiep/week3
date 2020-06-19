@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    function inputArray(a){
+        let sizeArr;
+        do{
+            sizeArr=+prompt("Nhập kích thước mảng: ");
+        }while(sizeArr<=0);
+        for(let i=0;i<sizeArr;i++){
+            a[i]= prompt("Nhập phần tử thứ " + i+ " : ");
+        }
+    }
+    function displayArray(a){
+        for(i=0;i<a.length;i++){
+            document.write(a[i] +" ");
+        }
+    }
+    function inputElement (a){
+        let element = prompt("Nhập ký tự bất kỳ: ");
+        let count = 0;
+        for (i=0;i<a.length;i++){
+            if (element==a[i]) {
+                count++;
+            }
+        }  return count;
+    }
+    function checkCount(a) {
+        let count = inputElement(a);
+        if (count > 0)
+            document.write('<br> Số lần xuất hiện là: ' + count);
+        else
+            document.write('<br> -1')
+    }
+    let arr = new Array()
+    inputArray(arr);
+    displayArray(arr);
+    checkCount(arr);
+</script>
+</body>
+</html>

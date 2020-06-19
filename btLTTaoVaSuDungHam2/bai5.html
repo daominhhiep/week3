@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    function inputNumber(a){
+        let sizeArr = 3;
+        for(let i=0;i<sizeArr;i++){
+            a[i]= +prompt("Nhập phần tử thứ " + i+ " : ");}}
+
+    function displayNumber(a){
+        for(i=0;i<a.length;i++){
+            document.write(a[i] +" ");}}
+
+    function minNumber(a){
+        let min=a[0];
+        for(let i=1;i<a.length;i++){
+            if(min>a[i]){
+                min=a[i];}}
+        return min;}
+
+    let arr = new Array();
+    inputNumber(arr);
+    document.write("Ba số đã nhập là :");
+    displayNumber(arr);
+    document.write("<br> Phần tử nhỏ nhất là: " + minNumber(arr));
+</script>
+</body>
+</html>

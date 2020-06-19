@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    function factorial(number) {
+        if (number==1) {
+            return 1;
+        }
+            return number*factorial(number-1);
+    }
+    let inputNumber = +prompt('Nhap vao so : ');
+    document.write('Giai thua la : ' + factorial(inputNumber));
+</script>
+</body>
+</html>
