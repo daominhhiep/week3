@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi Feet va Meters</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td><p><label>Feet</label></p></td>
+            <td>   <input id="inputFeet" type="number" placeholder="Feet"
+                          oninput="temperatureConverter1(this.value)"
+                          onchange="temperatureConverter1(this.value)"> </td>
+        </tr>
+        <tr>
+            <td><p><label>Meters</label></p></td>
+            <td><input id="inputMeters" type="number" placeholder="Meters"
+                       oninput="temperatureConverter2(this.value)"
+                       onchange="temperatureConverter2(this.value)"></td>
+        </tr>
+    </table>
+</form>
+    <script>
+        function temperatureConverter1(valNum) {
+            valNum = parseFloat(valNum)*0.305;
+            document.getElementById("inputMeters").value = valNum;
+        }
+        function temperatureConverter2(valNum) {
+            valNum = parseFloat(valNum)*3.279;
+            document.getElementById("inputFeet").value = valNum;
+        }
+    </script>
+</body>
+</html>

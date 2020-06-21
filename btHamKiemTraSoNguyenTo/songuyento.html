@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function  isPrime(number) {
+        if (number<2){
+            return false;
+        } else {
+            for (let i=2;i<=Math.sqrt(number);i++){
+                if (number%i==0)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    let result = isPrime(+prompt('Nhap so vao:'))
+    if (result===true){
+        alert('La so nguyen to');
+    } else {
+        alert('Khong phai so nguyen to');
+    }
+
+    let count = 0;
+    let myNumber = 2;
+    while (count<1229){
+        let result = isPrime(myNumber);
+        if (result===true){
+            document.write(myNumber + "<br>");
+            count++
+        }
+        myNumber++
+    }
+
+</script>
+</body>
+</html>
